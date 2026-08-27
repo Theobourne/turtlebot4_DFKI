@@ -1,0 +1,13 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "$HOME/turtlebot4_ws/install/object_detector/lib/python3.12/site-packages",
+        "$HOME/turtlebot4_ws/install/frame_grabber/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "$HOME/turtlebot4_ws/install/object_detector/lib/python3.12/site-packages",
+        "$HOME/turtlebot4_ws/install/frame_grabber/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

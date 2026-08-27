@@ -1,0 +1,21 @@
+# Waypoints for the object search, in the map frame of maps/room_a.yaml.
+#
+# These were derived from the map itself, not guessed: the free space of
+# room_a.pgm was distance-transformed to keep at least 0.45 m of clearance
+# from any wall or unknown cell, then k-means split the reachable area into
+# five regions. Each waypoint is a region centre, ordered into a sensible tour.
+#
+# Reachable free space is 44.6 m^2, spanning x -0.62..+6.43, y -3.87..+7.18.
+#
+# yaw is in radians and only sets the arrival heading — the search sweeps a
+# full turn at every stop anyway, so it is not critical.
+#
+# Check these against RViz before a real run: they are only as good as the map,
+# and furniture moves.
+
+waypoints:
+  - {x: +1.24, y: +0.48, yaw: +0.00}   # near the map origin, opens the tour
+  - {x: +3.13, y: -0.96, yaw: +1.82}   # largest open region
+  - {x: +5.90, y: -2.72, yaw: +2.35}   # far nook; drop this one if it is a dead end
+  - {x: +2.82, y: +1.91, yaw: -1.60}   # centre-north
+  - {x: +0.75, y: +3.52, yaw: -0.99}   # north-west corner

@@ -1,0 +1,18 @@
+# Where the robot sits when a mission begins — normally the dock.
+# Recorded by 'ros2 run object_detector mission' after you localized
+# by hand in RViz. Having this lets the next run set AMCL's initial
+# pose itself, which is the one genuinely interactive step in
+# bringing up localization.
+#
+# 'docked' records whether the robot was on the dock at the time.
+# Undocking moves it ~0.3 m, so a pose taken in the other state is
+# wrong by about that much.
+#
+# Re-record it if the dock moves, or if the map is rebuilt.
+
+start_pose:
+  x: 0.003
+  y: 0.028
+  yaw: 0.0117
+  docked: false
+  recorded: 2026-08-13 15:20

@@ -1,0 +1,81 @@
+# ---- ROS 2 / colcon build output -----------------------------------------
+build/
+install/
+log/
+logs/
+
+# ---- captured data --------------------------------------------------------
+# The frame grabber's ring buffer and anything else the robot records. These
+# regenerate on every run and are large.
+oakd_frames/
+previews/
+
+# rosbags
+*.mcap
+*.db3
+rosbag2_*/
+
+# ---- model weights --------------------------------------------------------
+# yolov8n.pt is ~6 MB and Ultralytics re-downloads it automatically on first
+# use, so there is no reason to carry it in the repo.
+*.pt
+*.pth
+*.onnx
+*.engine
+*.blob
+
+# ---- images and video -----------------------------------------------------
+# Detection screenshots, annotated frames, previews. Note this deliberately
+# does NOT cover *.pgm, so SLAM maps under maps/ are still tracked.
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.mp4
+*.avi
+*.mkv
+
+# ---- editor ---------------------------------------------------------------
+# .vscode/browse.vc.db is the C/C++ IntelliSense database and grows to over a
+# gigabyte, which is past GitHub's 100 MB per-file hard limit. Ignore the
+# directory's contents but keep the small shared settings files.
+.vscode/*
+!.vscode/settings.json
+!.vscode/c_cpp_properties.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.vc.db
+*.vc.db-shm
+*.vc.db-wal
+
+# ---- python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ---- os -------------------------------------------------------------------
+.DS_Store
+*~
+*.swp
+
+# Personal research notes and session context — not for the shared repo.
+memory.md
+
+# Write-ups generated for reporting elsewhere, not documentation of the repo.
+# README.md and turtlebot4_setup_log.md ARE tracked — they describe how to run
+# and maintain this project, which belongs with the code.
+PROJECT_REPORT.md
+
+# Annotated images saved when the search finds its target — run artefacts.
+finds/
+
+# Claude Code local settings — machine-specific paths and permission entries.
+# Ignored globally on the original workstation too, but that protection does not
+# travel with a clone, so pin it here.
+.claude/settings.local.json
+
+# Figures generated for the write-up, alongside PROJECT_REPORT.md.
+figures/

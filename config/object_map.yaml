@@ -1,0 +1,27 @@
+# Objects located by the search, in the map frame of maps/room_a.yaml.
+# Written by 'ros2 run object_detector search' and drawn by
+# 'ros2 run object_detector object_map'.
+#
+# This sits BESIDE the occupancy grid rather than inside it: room_a.pgm
+# describes walls for Nav2 to plan against, and must not be edited.
+#
+# Delete an entry to remove it from the map, or delete the file to
+# start over.
+
+objects:
+- name: chair
+  x: 3.298
+  y: -2.858
+  z: 0.567
+  sightings: 8
+  confidence: null
+  first_seen: 2026-08-18 16:06
+  updated: 2026-08-18 16:06
+- name: bottle
+  x: 3.474
+  y: 1.831
+  z: 0.139
+  sightings: 29
+  confidence: null
+  first_seen: 2026-08-18 16:30
+  updated: 2026-08-18 16:30
